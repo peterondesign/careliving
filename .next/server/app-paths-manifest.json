@@ -1,0 +1,8 @@
+{
+  "/services/page": "app/services/page.js",
+  "/services/companionship/page": "app/services/companionship/page.js",
+  "/services/housekeeping/page": "app/services/housekeeping/page.js",
+  "/page": "app/page.js",
+  "/services/medication/page": "app/services/medication/page.js",
+  "/services/respite/page": "app/services/respite/page.js"
+}

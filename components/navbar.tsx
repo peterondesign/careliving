@@ -28,7 +28,7 @@ export function Navbar() {
           {/* <Button variant="ghost" asChild>
             <Link href="/contact">Get in touch</Link>
           </Button> */}
-          <Button className='bg-teal-600 text-white' asChild>
+          <Button className='bg-teal-600 text-white text-xl' asChild>
             <Link href="/contact">Contact Us</Link>
           </Button>
         </div>

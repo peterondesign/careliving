@@ -4,7 +4,7 @@ import { NextPage } from 'next';
 import { Button } from '@/components/ui/button';
 import { ServiceCard } from '@/components/service-card';
 
-type ServiceName = 'personal-care' | 'companionship' | 'transportation' | 'meal-prep';
+type ServiceName = 'personal-care' | 'companionship' | 'medication' | 'respite' | 'housekeeping' ;
 
 interface ServiceProps {
     serviceSlug: ServiceName;
@@ -14,54 +14,63 @@ interface ServiceProps {
 const Service: NextPage<ServiceProps> = ({ serviceSlug, serviceTitle }) => {
     const serviceDetails: { [key: string]: { shortDescription: string, longDescription: string, imageUrl: string } } = {
         "personal-care": {
-            shortDescription: "Comprehensive personal care services tailored to individual needs.",
-            longDescription: "Comprehensive personal care services tailored to individual needs.",
+            shortDescription: "We assist with daily tasks, promoting independence and dignity through respectful, professional care.",
+            longDescription: "We assist with daily tasks like bathing, dressing, and grooming, helping clients maintain their independence and dignity. Our carelivers ensure these essential routines are handled with respect and professionalism, fostering comfort and confidence.",
             imageUrl: "/personalcare.jpeg?height=400&width=600"
         },
         "companionship": {
-            shortDescription: "Dedicated companionship and emotional support services.",
-            longDescription: "Comprehensive personal care services tailored to individual needs.",
+            shortDescription: "CareLiving provides emotional support and meaningful connections, fostering joy and reducing isolation.",
+            longDescription: "CareLiving offers emotional support and meaningful interactions, reducing feelings of loneliness and isolation. From engaging conversations to shared activities, our carelivers enhance the joy and connection in daily life",
             imageUrl: "/companionship.jpg?height=400&width=600"
+        },
+        "respite": {
+            shortDescription: "We offer respite care, ensuring loved ones are safe while caregivers recharge and find peace of mind.",
+            longDescription: "Family caregivers deserve time to recharge. We provide short-term care, ensuring loved ones remain safe and supported. Our flexible respite services bring peace of mind, allowing caregivers to focus on their own well-being.",
+            imageUrl: "/respitecare.jpg?height=400&width=600"
+        },
+        "medication": {
+            shortDescription: "We provide timely medication reminders, supporting health, safety, and family peace of mind.",
+            longDescription: "We help clients stay on track with prescribed medications through timely and accurate reminders. This service promotes health and safety while easing the burden on families.",
+            imageUrl: "/medicationreminder.jpg?height=400&width=600"
         },
         "housekeeping": {
             shortDescription: "Light housekeeping and meal preparation services.",
-            longDescription: "Comprehensive personal care services tailored to individual needs.",
+            longDescription: "We handle light cleaning and meal prep, keeping homes safe, clean, and stress-free.",
             imageUrl: "/housekeeping.jpg?height=400&width=600"
         },
-        // ...other services...
     };
 
     const otherServices = [
         {
             title: "Personal Care Assistance",
-            shortDescription: "Professional assistance with daily personal care needs.",
+            shortDescription: "Help with bathing, dressing, and hygiene.",
             imageUrl: "/personalcare.jpeg?height=400&width=600",
             href: "/services/personal-care"
         },
         {
             title: "Companionship",
-            shortDescription: "Dedicated companionship and emotional support.",
+            shortDescription: "Emotional support and social engagement.",
             imageUrl: "/companionship.jpg?height=400&width=600",
             href: "/services/companionship"
         },
+
         {
-            title: "Light Housekeeping",
-            shortDescription: "Help with household tasks and meal preparation.",
-            imageUrl: "/housekeeping.jpg?height=400&width=600",
-            href: "/services/housekeeping"
-        },
-        {
+            title: "Respite Care",
+            shortDescription: "Short-term relief for family caregivers.",
+            imageUrl: "/respitecare.jpg?height=400&width=600",
+            href: "/services/respite"
+        }, {
             title: "Medication Reminders",
-            shortDescription: "Timely medication reminders and monitoring.",
-            imageUrl: "/placeholder.svg?height=400&width=600",
+            shortDescription: "Ensuring timely and accurate medication intake.",
+            imageUrl: "/medicationreminder.jpg?height=400&width=600",
             href: "/services/medication"
         },
         {
-            title: "Respite Care",
-            shortDescription: "Temporary relief for primary caregivers.",
-            imageUrl: "/placeholder.svg?height=400&width=600",
-            href: "/services/respite"
-        }
+            title: "Housekeeping",
+            shortDescription: "Light cleaning and meal preparation.",
+            imageUrl: "/housekeeping.jpg?height=400&width=600",
+            href: "/services/housekeeping"
+        },
     ].filter(otherService => otherService.href !== `/services/${serviceSlug}`);
 
     return (
@@ -82,7 +91,7 @@ const Service: NextPage<ServiceProps> = ({ serviceSlug, serviceTitle }) => {
                             </Button>
                         </div>
                     </div>
-                    <div className="mt-12 md:mt-0 flex flex-end w-3/5 py-12">
+                    <div className="-mt-6 md:mt-0 flex flex-end w-3/5 py-12">
                         <img src={serviceDetails[serviceSlug]?.imageUrl} alt="Service Hero" className="rounded-xl" />
                     </div>
                 </div>

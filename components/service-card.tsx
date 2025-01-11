@@ -25,7 +25,7 @@ export function ServiceCard({ title, description, imageUrl, href }: ServiceCardP
         <p className="text-gray-600">{description}</p>
       </CardContent>
       <CardFooter className="p-6 pt-0">
-        <Button asChild className="w-full" variant="secondary">
+        <Button asChild className="w-full text-xl" variant="secondary">
           <a href={href}>Learn More</a>
         </Button>
       </CardFooter>

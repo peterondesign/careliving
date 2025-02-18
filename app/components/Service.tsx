@@ -3,8 +3,12 @@
 import { NextPage } from 'next';
 import { Button } from '@/components/ui/button';
 import { ServiceCard } from '@/components/service-card';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
+import ContactCTA from '../components/ContactCTA';
+import Link from 'next/link';
 
-type ServiceName = 'personal-care' | 'companionship' | 'medication' | 'respite' | 'housekeeping' ;
+type ServiceName = 'personal-care' | 'companionship' | 'medication' | 'respite' | 'housekeeping';
 
 interface ServiceProps {
     serviceSlug: ServiceName;
@@ -76,6 +80,7 @@ const Service: NextPage<ServiceProps> = ({ serviceSlug, serviceTitle }) => {
     return (
         <div>
             {/* Hero Section */}
+            <Header />
             <section className="bg-teal-600 text-white pt-16">
                 <div className="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between">
                     <div className="w-3/5 py-12">
@@ -86,9 +91,12 @@ const Service: NextPage<ServiceProps> = ({ serviceSlug, serviceTitle }) => {
                             {serviceDetails[serviceSlug]?.shortDescription}
                         </p>
                         <div className='md:text-left text-center mx-auto w-full'>
-                            <Button size="lg" variant="secondary" asChild>
-                                <a href="/contact">Contact Us</a>
-                            </Button>
+                            <Link
+                                href="/contact"
+                                className="inline-block bg-white hover:bg-white/90 text-teal-600 px-8 py-4 rounded-2xl transition-colors font-semibold"
+                            >
+                                Contact Us
+                            </Link>
                         </div>
                     </div>
                     <div className="-mt-6 md:mt-0 flex flex-end w-3/5 py-12">
@@ -120,6 +128,8 @@ const Service: NextPage<ServiceProps> = ({ serviceSlug, serviceTitle }) => {
                     </div>
                 </div>
             </section>
+            <ContactCTA />
+            <Footer />
         </div>
     );
 };

@@ -2,7 +2,7 @@ import { useRouter } from 'next/router';
 import { NextPage } from 'next';
 import { Button } from '@/components/ui/button';
 import { ServiceCard } from '@/components/service-card';
-
+import Header from '../components/Header';
 const Service: NextPage = () => {
     const router = useRouter();
     const { service } = router.query;
@@ -49,6 +49,7 @@ const Service: NextPage = () => {
 
     return (
         <div>
+            <Header />
             {/* Hero Section */}
             <section className="bg-teal-600 text-white pt-16">
                 <div className="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between">

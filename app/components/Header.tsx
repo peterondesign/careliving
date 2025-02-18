@@ -28,16 +28,19 @@ const Header = () => {
 
   return (
     <header className="w-full animate-fadeIn fixed z-50 bg-white shadow-md">
-      <div className="bg-primary w-full py-3 px-4 md:px-20">
+      <div className="bg-teal-800 w-full py-3 px-4 md:px-20">
         <div className="flex items-center justify-between text-white">
-          <div className="flex items-center gap-1">
-            <span className="hidden md:inline text-xl font-bold md:text-xl">We're here for you. Call us:</span>
-            <Phone size={18}/>
-            <span className="text-xl font-bold md:text-xl">571-599-7467</span>
-          </div>
+          <a href="tel:571-599-7467" className="cursor-pointer flex items-center gap-1">
+            <div className="flex items-center gap-1">
+              <span className="hidden md:inline text-xl font-bold md:text-xl">We're here for you.</span>
+              <Phone size={24} />
+              <span className="text-xl font-bold md:text-xl">Call us: 571-599-7467</span>
+            </div>
+          </a>
+
           <div className="hidden md:flex items-center gap-4">
             <Link
-              href="https://www.instagram.com/your-instagram"
+              href="https://www.instagram.com/carelivinghome"
               target="_blank"
               rel="noopener noreferrer"
               className="text-white hover:text-gray-200 cursor-pointer"
@@ -45,7 +48,7 @@ const Header = () => {
               <Instagram size={24} />
             </Link>
             <Link
-              href="https://www.linkedin.com/company/your-linkedin"
+              href="https://www.x.com/carelivinghome"
               target="_blank"
               rel="noopener noreferrer"
               className="text-white hover:text-gray-200 cursor-pointer"
@@ -53,7 +56,7 @@ const Header = () => {
               <Twitter size={24} />
             </Link>
             <Link
-              href="https://www.linkedin.com/company/your-linkedin"
+              href="https://www.facebook.com/profile.php?id=61572990697550"
               target="_blank"
               rel="noopener noreferrer"
               className="text-white hover:text-gray-200 cursor-pointer"
@@ -63,7 +66,7 @@ const Header = () => {
           </div>
         </div>
       </div>
-      
+
       <nav className="flex items-center justify-between py-4 px-4 md:px-20">
         <Link href="/" className="relative z-50">
           <img src="/carelivinglogo.svg" alt="CareLiving Logo" className="h-8 md:h-10" />
@@ -71,7 +74,7 @@ const Header = () => {
 
         {/* Mobile Menu Button */}
         <div className="flex items-center gap-4 xl:hidden">
-          <Button asChild variant="default" className="bg-primary text-white hover:bg-primary/90">
+          <Button asChild variant="default" className="bg-primary text-white hover:bg-primary/90 rounded-xl">
             <Link href="/contact">Contact Us</Link>
           </Button>
           <button
@@ -83,14 +86,17 @@ const Header = () => {
         </div>
 
         {/* Desktop Navigation */}
-        <div className="hidden xl:flex gap-6 text-sm md:text-base text-text">
+        <div className="hidden xl:flex gap-6 text-sm md:text-base text-text items-center">
           <Link href="/" className="hover:text-primary transition-colors">Home</Link>
           <Link href="/services" className="hover:text-primary transition-colors">Services</Link>
           <Link href="/resources" className="hover:text-primary transition-colors">Resources</Link>
           <Link href="/about" className="hover:text-primary transition-colors">About Us</Link>
-          <Link href="/caregivers" className="hover:text-primary transition-colors">CareLivers</Link>
+          <Link href="/carelivers" className="hover:text-primary transition-colors">CareLivers</Link>
           <Link href="/waitlist" className="hover:text-primary transition-colors">Waitlist</Link>
-          <Link href="/contact" className="hover:text-primary transition-colors">Contact Us</Link>
+          <Link href="/contact" className="inline-block bg-primary hover:bg-primary/90 text-white px-2 py-2 rounded-xl transition-colors font-semibold"
+          >
+            Contact Us
+          </Link>
         </div>
 
         {/* Mobile Navigation */}
@@ -104,43 +110,43 @@ const Header = () => {
               className="fixed inset-0 top-[120px] z-40 "
             >
               <div className="flex flex-col gap-6 text-lg p-6 bg-white shadow-lg rounded-b-2xl">
-                <Link 
-                  href="/" 
+                <Link
+                  href="/"
                   className="hover:text-primary transition-colors"
                   onClick={() => setIsOpen(false)}
                 >
                   Home
                 </Link>
-                <Link 
-                  href="/services" 
+                <Link
+                  href="/services"
                   className="hover:text-primary transition-colors"
                   onClick={() => setIsOpen(false)}
                 >
                   Services
                 </Link>
-                <Link 
-                  href="/resources" 
+                <Link
+                  href="/resources"
                   className="hover:text-primary transition-colors"
                   onClick={() => setIsOpen(false)}
                 >
                   Resources
                 </Link>
-                <Link 
-                  href="/about" 
+                <Link
+                  href="/about"
                   className="hover:text-primary transition-colors"
                   onClick={() => setIsOpen(false)}
                 >
                   About Us
                 </Link>
-                <Link 
-                  href="/caregivers" 
+                <Link
+                  href="/caregivers"
                   className="hover:text-primary transition-colors"
                   onClick={() => setIsOpen(false)}
                 >
                   CareLivers
                 </Link>
-                <Link 
-                  href="/waitlist" 
+                <Link
+                  href="/waitlist"
                   className="hover:text-primary transition-colors"
                   onClick={() => setIsOpen(false)}
                 >

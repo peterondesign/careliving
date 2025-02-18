@@ -1,52 +1,49 @@
-import { NextPage } from 'next';
-import { Button } from '@/components/ui/button'
-import { TestimonialCard } from '@/components/testimonial-card'
+import Header from "../components/Header";
+import Hero from "../components/Hero";
+import Services from "../components/Services";
+import AboutSection from "../components/AboutSection";
+import ContactCTA from "../components/ContactCTA";
+import Footer from "../components/Footer";
+import { ArrowRight } from "lucide-react";
+import Link from 'next/link'
 
-const About: NextPage = () => {
+export default function About() {
     return (
-        <div>
-            <section className="pt-32 pb-20 bg-white">
-                <div className="container mx-auto px-4">
-                    <h2 className="text-3xl font-bold text-center mb-12">About Us</h2>
-                    <div className="max-w-3xl mx-auto text-center">
-                        <p className="text-xl mb-6">
-                            At CareLiving, we provide personalized home care services to support seniors in need.
-                        </p>
-                        <p className="text-xl mb-6">
-                            Our mission is to enhance quality of life through compassionate care while giving families peace of mind.
-                        </p>
-                        <p className="text-xl mb-6">
-                            We honor family caregivers, or ‘carelivers,’ by partnering with them to deliver tailored solutions that bring comfort and dignity home.
-                        </p>
-
-                    </div>
+        <div className="min-h-screen bg-white">
+            <Header />
+            <main>
+                <div className="pt-48">
+                    <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">About Us</h2>
+                    <section className="bg-secondary rounded-2xl border border-secondary-dark my-20 mx-4 md:mx-20 p-8 md:p-20 animate-fadeIn">
+                        <div className="flex flex-col md:flex-row gap-16 items-center">
+                            <div className="flex-1">
+                                <div>
+                                    <p className="text-lg text-text-secondary mb-8">
+                                        At CareLiving, we are dedicated to providing personalized home care services that support seniors in maintaining their independence and enhancing their quality of life.
+                                    </p>
+                                    <h2 className="text-3xl md:text-4xl font-bold mt-4 mb-6">Our Mission</h2>
+                                    <p className="text-lg text-text-secondary mb-8">
+                                        Our mission is to deliver compassionate care to our clients while also bringing comfort and dignity to their daily lives. We strive to offer families peace of mind, knowing their loved ones are in capable and caring hands.
+                                    </p>
+                                    <h2 className="text-3xl md:text-4xl font-bold mt-4 mb-6">Our Approach</h2>
+                                    <p className="text-lg text-text-secondary">
+                                        We honor family caregivers, whom we refer to as 'carelivers,' by collaborating closely with them to develop tailored care solutions. This partnership ensures that each client receives support that is customized to their unique needs and preferences, fostering a sense of security and well-being at home.
+                                    </p>
+                                </div>
+                            </div>
+                            <div className="flex-1">
+                                <img
+                                    src="/personalcare.jpeg"
+                                    alt="Caring professional"
+                                    className="w-full h-[540px] object-cover rounded-2xl"
+                                />
+                            </div>
+                        </div>
+                    </section>
                 </div>
-            </section>
-
-
-            {/* Testimonials Section */}
-            <section className="py-20 bg-gray-50">
-                <div className="container mx-auto px-4">
-                    <h2 className="text-3xl font-bold text-center mb-12">What Our Clients Say</h2>
-                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        <TestimonialCard
-                            content="The caregivers have been a blessing for our family. Their compassion and dedication have made a world of difference."
-                            author={{ name: "Sarah M." }}
-                        />
-                        <TestimonialCard
-                            content="Professional, caring, and always reliable. We couldn't be happier with the service provided."
-                            author={{ name: "James R." }}
-                        />
-                        <TestimonialCard
-                            content="The peace of mind knowing our loved one is in good hands is priceless."
-                            author={{ name: "Linda K." }}
-                        />
-                    </div>
-                </div>
-            </section>
-
+                <ContactCTA />
+            </main>
+            <Footer />
         </div>
     );
-};
-
-export default About;
+}

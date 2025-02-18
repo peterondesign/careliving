@@ -2,12 +2,42 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Import Inter font from Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+/* Define the Plus Jakarta Sans font via @font-face (using the same CDN sources) */
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('https://fonts.gstatic.com/s/plusjakartasans/v1/PKFvW2JT5ah45w0lWJBxQZp24Hg.woff2') format('woff2');
+}
 
-/* Apply Inter font to the entire application */
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('https://fonts.gstatic.com/s/plusjakartasans/v1/PKFvW2JT5ah45w0lWJBxUzp24Hg.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('https://fonts.gstatic.com/s/plusjakartasans/v1/PKFvW2JT5ah45w0lWJBxUzp24Hg.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('https://fonts.gstatic.com/s/plusjakartasans/v1/PKFvW2JT5ah45w0lWJBxMxZ24Hg.woff2') format('woff2');
+}
+
+/* Apply Plus Jakarta Sans font to the entire application */
 body {
-    font-family: 'Inter', sans-serif;
+  font-family: 'Plus Jakarta Sans', sans-serif;
 }
 
 @layer utilities {

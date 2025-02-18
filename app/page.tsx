@@ -13,7 +13,7 @@ export default function Home() {
               Where Compassion Meets <span className="bg-teal-100 text-gray-900 rounded px-2">Home</span>
             </h1>
             <p className="text-xl text-teal-50 mb-8 md:text-left text-center">
-              We provide quality home health and personal care, helping seniors with daily tasks to maintain their independence.
+            We provide quality home care and personal care services, helping seniors with daily tasks to maintain their independence
             </p>
             <div className='md:text-left text-center mx-auto w-full'>
               <Button size="lg" variant="secondary" className='text-xl' asChild>

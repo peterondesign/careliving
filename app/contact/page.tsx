@@ -1,11 +1,34 @@
+"use client"
+
 import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
 import { Input } from '@/components/ui/input'
+import {Dropdown, DropdownTrigger, DropdownMenu, DropdownItem, Selection} from "@nextui-org/react";
 import { Textarea } from '@/components/ui/textarea'
 import { Mail, Phone, MapPin } from 'react-feather'
 import Head from 'next/head'
+import React from "react";
+
 
 export default function Contact() {
+  const [selectedKeys, setSelectedKeys] = React.useState<Selection>(new Set(["personal care"]));
+  const [form, setForm] = React.useState({ name: '', email: '', message: '' });
+
+  const selectedValue = React.useMemo(
+    () => Array.from(selectedKeys).join(", ").replaceAll("_", " "),
+    [selectedKeys],
+  );
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setForm(prevForm => ({ ...prevForm, [name]: value }));
+  };
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    // Handle form submission
+  };
+
   return (
     <>
       <Head>
@@ -19,22 +42,91 @@ export default function Contact() {
           <h1 className="text-4xl font-bold text-center mb-12">Contact Us</h1>
           <div className="flex flex-col w-full mx-auto justify-center md:flex-row gap-8">
             <div className="w-full items-center md:w-1/2">
-              <Card>
+              <Card className='max-w-md'>
                 <CardContent className="p-6">
-                  <form className="space-y-6">
-                    <div className="space-y-2">
-                      <label htmlFor="name" className="text-sm font-medium">Name</label>
-                      <Input id="name" placeholder="Your name" />
+                  <form onSubmit={handleSubmit} className="space-y-6">
+                    <div>
+                      <label htmlFor="name" className="block text-sm font-medium text-gray-700">Name</label>
+                      <input
+                        type="text"
+                        name="name"
+                        id="name"
+                        value={form.name}
+                        onChange={handleChange}
+                        className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-teal-500 focus:border-teal-500"
+                        required
+                      />
                     </div>
-                    <div className="space-y-2">
-                      <label htmlFor="email" className="text-sm font-medium">Email</label>
-                      <Input id="email" type="email" placeholder="Your email" />
+                    <div>
+                      <label htmlFor="email" className="block text-sm font-medium text-gray-700">Email</label>
+                      <input
+                        type="email"
+                        name="email"
+                        id="email"
+                        value={form.email}
+                        onChange={handleChange}
+                        className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-teal-500 focus:border-teal-500"
+                        required
+                      />
                     </div>
-                    <div className="space-y-2">
-                      <label htmlFor="message" className="text-sm font-medium">Message</label>
-                      <Textarea id="message" placeholder="How can we help?" />
+                    <div>
+                      <label htmlFor="email" className="block text-sm font-medium text-gray-700">Phone Number</label>
+                      <input
+                        type="email"
+                        name="email"
+                        id="email"
+                        value={form.email}
+                        onChange={handleChange}
+                        className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-teal-500 focus:border-teal-500"
+                        required
+                      />
                     </div>
-                    <Button type="submit" className="w-full">Send Message</Button>
+                    <div className="space-y-2 flex flex-col">
+                      <label htmlFor="name" className="text-sm font-medium">Type of Care</label>
+                      <Dropdown>
+                        <DropdownTrigger>
+                            <Button className="text-left py-8 w-fit capitalize break-words whitespace-normal" variant="outline">
+                              {selectedValue || "No service selected"}
+                            </Button>
+                        </DropdownTrigger>
+                        <DropdownMenu
+                        className='bg-white shadow-md'
+                          disallowEmptySelection={false}
+                          aria-label="Multiple selection example"
+                          closeOnSelect={false}
+                          selectedKeys={selectedKeys}
+                          selectionMode="multiple"
+                          variant="flat"
+                          onSelectionChange={setSelectedKeys}
+                        >
+                          <DropdownItem key="personal care">Personal Care</DropdownItem>
+                          <DropdownItem key="companionship">Companionship</DropdownItem>
+                          <DropdownItem key="housekeeping">Housekeeping</DropdownItem>
+                          <DropdownItem key="medication reminders">Medication Reminders</DropdownItem>
+                          <DropdownItem key="respite">Respite Care</DropdownItem>
+                        </DropdownMenu>
+                      </Dropdown>
+                    </div>
+                    <div>
+                      <label htmlFor="message" className="block text-sm font-medium text-gray-700">Message</label>
+                      <textarea
+                        name="message"
+                        id="message"
+                        value={form.message}
+                        onChange={handleChange}
+                        className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-teal-500 focus:border-teal-500"
+                        rows={4}
+                        required
+                      ></textarea>
+                    </div>
+                    <div>
+                      <button
+                        type="submit"
+                        className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-white bg-teal-600 hover:bg-teal-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-500"
+                      >
+                        Send Message
+                      </button>
+                    </div>
                   </form>
                 </CardContent>
               </Card>

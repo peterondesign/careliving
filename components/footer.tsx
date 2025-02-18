@@ -11,7 +11,7 @@ export function Footer() {
         <div className="relative container mx-auto px-4 py-16 flex flex-col md:flex-row items-center justify-between text-white text-center md:text-left">
           <div className="md:w-1/2">
             {/* <h2 className="text-3xl font-bold mb-4">Stay Connected</h2> */}
-            <p className="mb-6">Care starts here. Contact CareLiving today for your free consultation and experience unmatched compassion and support where it matters most — at home.</p>
+            <p className="mb-6">Care starts here. Contact CareLiving today for your free consultation and support where it matters most — at home.</p>
             <Button className="bg-teal-500 hover:bg-teal-700 text-white font-bold py-2 px-4 rounded">
               <a href="/contact"> Contact Us</a>
             </Button>
@@ -31,8 +31,10 @@ export function Footer() {
               <h4 className="font-medium mb-4 text-teal-200">Quick Links</h4>
               <ul className="space-y-2">
                 <li><a href="/" className="text-teal-50 hover:text-white">Home</a></li>
-                <li><a href="/about" className="text-teal-50 hover:text-white">About Us</a></li>
                 <li><a href="/services" className="text-teal-50 hover:text-white">Services</a></li>
+                <li><a href="/resources" className="text-teal-50 hover:text-white">Resources</a></li>
+                <li><a href="/about" className="text-teal-50 hover:text-white">About Us</a></li>
+                <li><a href="/careers" className="text-teal-50 hover:text-white">CareLivers</a></li>          <li><a href="/waitlist" className="text-teal-50 hover:text-white">Waitlist</a></li>
                 <li><a href="/contact" className="text-teal-50 hover:text-white">Contact Us</a></li>
               </ul>
             </div>
@@ -54,7 +56,7 @@ export function Footer() {
               </ul>
             </div>
           </div>
-          <div className="my-12 bg-teal-100 text-teal-900 py-4 text-left md:text-center rounded-lg flex flex-col md:flex-wrap flex-nowrap md:flex-row gap-4 md:px-12 px-4 md:mx-auto mx-0 text-center md:w-auto w-webkit-fill-available md:justify-center justify-center items-center">
+          <div className="my-12 bg-teal-100 text-teal-900 py-4 text-left md:text-center rounded-lg flex flex-col md:flex-wrap flex-nowrap md:flex-row gap-4 md:px-12 px-4 md:mx-auto mx-0 md:w-auto w-webkit-fill-available md:justify-center justify-start items-center">
             <div className="flex md:justify-center justify-start items-center space-x-4">
               <Mail className="w-5 h-5" />
               <a href="mailto:info@carelivers.com" className="text-teal-900 hover:underline">info@carelivers.com</a>

@@ -13,15 +13,24 @@ export function Navbar() {
             <Img src="/carelivinglogo.svg" alt="Logo" width={140} height={72} />
           </Link>
           <div className="hidden md:flex gap-6">
+          <Link href="/" className="text-gray-600 hover:text-teal-600">
+              Home
+            </Link>
             <Link href="/services" className="text-gray-600 hover:text-teal-600">
               Services
+            </Link>
+            <Link href="/resources" className="text-gray-600 hover:text-teal-600">
+              Resources
             </Link>
             <Link href="/about" className="text-gray-600 hover:text-teal-600">
               About Us
             </Link>
-            {/* <Link href="/careers" className="text-gray-600 hover:text-teal-600">
-              Careers
-            </Link> */}
+            <Link href="/careers" className="text-gray-600 hover:text-teal-600">
+              CareLivers
+            </Link>
+            <Link href="/waitlist" className="text-gray-600 hover:text-teal-600">
+              Join Our Waitlist
+            </Link>
           </div>
         </div>
         <div className="flex gap-4">

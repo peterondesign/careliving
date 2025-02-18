@@ -16,9 +16,7 @@ export default function RootLayout({
         <meta name="keywords" content="CareLiving, home health, personal care, senior care, quality care, compassionate care" />
       </head>
       <body className="min-h-screen flex flex-col">
-        <Navbar />
         {children}
-        <Footer />
       </body>
     </html>
   )

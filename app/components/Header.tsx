@@ -29,7 +29,7 @@ const Header = () => {
   return (
     <header className="w-full animate-fadeIn fixed z-50 bg-white shadow-md">
       <div className="bg-teal-800 w-full py-3 px-4 md:px-20">
-        <div className="flex items-center justify-between text-white">
+        <div className="flex items-center justify-between text-white flex-wrap">
           <a href="tel:571-599-7467" className="cursor-pointer flex items-center gap-1">
             <div className="flex items-center gap-1">
               <span className="hidden md:inline text-xl font-bold md:text-xl">We're here for you.</span>
@@ -37,6 +37,15 @@ const Header = () => {
               <span className="text-xl font-bold md:text-xl">Call us: 571-599-7467</span>
             </div>
           </a>
+
+          <Link
+            href="https://careliving.clearcareonline.com/quick-apply/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg font-bold"
+          >
+            Now Hiring
+          </Link>
 
           <div className="hidden md:flex items-center gap-4">
             <Link
@@ -91,7 +100,7 @@ const Header = () => {
           <Link href="/services" className="hover:text-primary transition-colors">Services</Link>
           <Link href="/resources" className="hover:text-primary transition-colors">Resources</Link>
           <Link href="/about" className="hover:text-primary transition-colors">About Us</Link>
-          <Link href="/carelivers" className="hover:text-primary transition-colors">CareLivers</Link>
+          <Link href="https://careliving.clearcareonline.com/quick-apply/" target="_blank" className="hover:text-primary transition-colors">CareLivers</Link>
           <Link href="/waitlist" className="hover:text-primary transition-colors">Waitlist</Link>
           <Link href="/contact" className="inline-block bg-primary hover:bg-primary/90 text-white px-2 py-2 rounded-xl transition-colors font-semibold"
           >
@@ -139,7 +148,7 @@ const Header = () => {
                   About Us
                 </Link>
                 <Link
-                  href="/caregivers"
+                  href="https://careliving.clearcareonline.com/quick-apply/" target="_blank"
                   className="hover:text-primary transition-colors"
                   onClick={() => setIsOpen(false)}
                 >

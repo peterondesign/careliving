@@ -25,7 +25,7 @@ export function Navbar() {
             <Link href="/about" className="text-gray-600 hover:text-teal-600">
               About Us
             </Link>
-            <Link href="/careers" className="text-gray-600 hover:text-teal-600">
+            <Link href="https://careliving.clearcareonline.com/quick-apply/" target="_blank" className="text-gray-600 hover:text-teal-600">
               CareLivers
             </Link>
             <Link href="/waitlist" className="text-gray-600 hover:text-teal-600">

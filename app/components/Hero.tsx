@@ -8,7 +8,7 @@ const Hero = () => {
     <div className="relative w-full animate-fadeIn">
       {/* Mobile Hero */}
       <div className="xl:hidden">
-        <div className="mt-[120px] relative w-full h-[300px]">
+        <div className="mt-[120px] relative w-full h-[42rem]">
           <Image
             src="/hero_mobile.jpg"
             alt="CareLiving Hero"

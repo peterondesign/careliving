@@ -39,7 +39,7 @@ const Footer = () => {
                         <Link href="/services" className="text-text-secondary hover:text-primary transition-colors">Services</Link>
                         <Link href="/resources" className="text-text-secondary hover:text-primary transition-colors">Resources</Link>
                         <Link href="/about" className="text-text-secondary hover:text-primary transition-colors">About Us</Link>
-                        <Link href="/carelivers" className="text-text-secondary hover:text-primary transition-colors">CareLivers (Careers)</Link>
+                        <Link href="https://careliving.clearcareonline.com/quick-apply/" target="_blank" className="text-text-secondary hover:text-primary transition-colors">CareLivers (Careers)</Link>
                         <Link href="/waitlist" className="text-text-secondary hover:text-primary transition-colors">Waitlist</Link>
                         <Link href="/contact" className="text-text-secondary hover:text-primary transition-colors">Contact Us</Link>
                     </nav>

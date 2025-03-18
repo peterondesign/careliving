@@ -1,4 +1,6 @@
 {
-  "/carelivers/page": "app/carelivers/page.js",
-  "/page": "app/page.js"
+  "/page": "app/page.js",
+  "/contact/page": "app/contact/page.js",
+  "/services/personal-care/page": "app/services/personal-care/page.js",
+  "/services/respite/page": "app/services/respite/page.js"
 }

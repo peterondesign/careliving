@@ -27,7 +27,7 @@ const Footer = () => {
                         rel="noopener noreferrer" >
                         <address className="flex items-center text-text-secondary mt-2 not-italic">
                             <MapPin size={16} className="mr-2" />
-                            491B Carlisle Dr, Herndon VA 20170
+                            491B Carlisle Dr, <br></br>Suite 202,<br></br> Herndon VA 20170
                         </address>
                     </a>
                 </div>

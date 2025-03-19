@@ -25,14 +25,16 @@ export default function RootLayout({
         <meta name="keywords" content="CareLiving, home health, personal care, senior care, quality care, compassionate care" />
         {/* Google tag (gtag.js) */}
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-2TC7JJWEY7"></script>
-        <script>
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-2TC7JJWEY7');
-          `}
-        </script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-2TC7JJWEY7');
+            `
+          }}
+        />
       </head>
       <body className='min-h-screen flex flex-col'>{children}</body>
     </html>

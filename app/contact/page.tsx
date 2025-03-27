@@ -7,12 +7,31 @@ import {Dropdown, DropdownTrigger, DropdownMenu, DropdownItem, Selection} from "
 import { Textarea } from '@/components/ui/textarea'
 import { Mail, Phone, MapPin } from 'react-feather'
 import Head from 'next/head'
-import React from "react";
+import React, { useEffect } from "react";
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 
+declare global {
+  interface Window {
+    gtag: (...args: any[]) => void;
+  }
+}
 
 export default function Contact() {
+  useEffect(() => {
+    const iframe = document.querySelector('iframe[src*="tally.so"]') as HTMLIFrameElement | null;
+    if (iframe) {
+      iframe.addEventListener("load", () => {
+        iframe.contentWindow?.addEventListener("message", (event: MessageEvent) => {
+          if (event.data.type === "form-submit") {
+            window.gtag('event', 'conversion', {
+              'send_to': 'AW-16926500271/n-Z6CJmliK8aEK_Ll4c_'
+            });
+          }
+        });
+      });
+    }
+  }, []);
 
   return (
     <>
@@ -21,6 +40,16 @@ export default function Contact() {
         <title>Contact Us - CareLiving</title>
         <meta name="description" content="Get in touch with CareLiving for quality home health and personal care services. Contact us via email, phone, or visit our location." />
         <meta name="keywords" content="CareLiving, contact, home health, personal care, email, phone, address" />
+        {/* Event snippet for Submit lead form conversion page */}
+        <script>
+          {`window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'AW-16926500271');`}
+        </script>
+        <script>
+          {`gtag('event', 'conversion', {'send_to': 'AW-16926500271/n-Z6CJmliK8aEK_Ll4c_'});`}
+        </script>
       </Head>
       <main className="pt-48 pb-20">
 

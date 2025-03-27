@@ -27,12 +27,13 @@ export default function RootLayout({
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-2TC7JJWEY7"></script>
         <script
           dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'G-2TC7JJWEY7');
-            `
+        __html: `
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-2TC7JJWEY7');
+          gtag('config', 'AW-16926500271');
+        `
           }}
         />
       </head>

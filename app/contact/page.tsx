@@ -1,10 +1,6 @@
 "use client"
 
-import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
-import { Input } from '@/components/ui/input'
-import {Dropdown, DropdownTrigger, DropdownMenu, DropdownItem, Selection} from "@nextui-org/react";
-import { Textarea } from '@/components/ui/textarea'
 import { Mail, Phone, MapPin } from 'react-feather'
 import Head from 'next/head'
 import React, { useEffect } from "react";
@@ -17,25 +13,9 @@ declare global {
   }
 }
 
-export default function Contact() {
-  useEffect(() => {
-    const iframe = document.querySelector('iframe[src*="tally.so"]') as HTMLIFrameElement | null;
-    if (iframe) {
-      iframe.addEventListener("load", () => {
-        iframe.contentWindow?.addEventListener("message", (event: MessageEvent) => {
-          if (event.data.type === "form-submit") {
-            window.gtag('event', 'conversion', {
-              'send_to': 'AW-16926500271/n-Z6CJmliK8aEK_Ll4c_'
-            });
-          }
-        });
-      });
-    }
-  }, []);
-
+export default function ContactPage() {
   return (
-    <>
-    <Header/>
+    <div> {/* Ensure a single parent element wraps all JSX */}
       <Head>
         <title>Contact Us - CareLiving</title>
         <meta name="description" content="Get in touch with CareLiving for quality home health and personal care services. Contact us via email, phone, or visit our location." />
@@ -52,7 +32,6 @@ export default function Contact() {
         </script>
       </Head>
       <main className="pt-48 pb-20">
-
         <div className="container mx-auto px-4">
           <h1 className="text-4xl font-bold text-center mb-12">Contact Us</h1>
           <div className="flex flex-col w-full mx-auto justify-center md:flex-row gap-8">
@@ -73,7 +52,6 @@ export default function Contact() {
             <div className="w-full md:w-1/2">
               <section className="pt-12 md:pt-0">
                 <div className="md:text-left text-center">
-
                   <div className="flex justify-start md:justify-start items-center space-x-4 mb-2">
                     <Mail className="w-5 h-5" />
                     <a href="mailto:info@carelivers.com" className="hover:underline">Email: info@carelivers.com</a>
@@ -107,10 +85,9 @@ export default function Contact() {
             </div>
           </div>
         </div>
-
       </main>
-      <Footer/>
-    </>
+      <Footer />
+    </div>
   )
 }
 

@@ -1,5 +1,7 @@
+"use client"
+
 import React, { useEffect } from 'react' // Import useEffect for side effects
-import { useRouter } from 'next/router' // Import useRouter for navigation
+import { useRouter } from 'next/navigation' // Use next/navigation for App Router
 
 // Add a TypeScript declaration for window.gtag
 declare global {

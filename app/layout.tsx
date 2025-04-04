@@ -1,8 +1,7 @@
 import { Navbar } from '@/components/navbar'
 import { Footer } from '@/components/footer'
 import '@/app/globals.css'
-import Head from 'next/head'
-import Script from 'next/script' // Import Script from next/script
+import Script from 'next/script'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 
@@ -11,6 +10,7 @@ const inter = Inter({ subsets: ['latin'] })
 export const metadata: Metadata = {
   title: 'CareLiving',
   description: 'CareLiving provides quality home health and personal care services, helping seniors with daily tasks to maintain their independence.',
+  keywords: 'CareLiving, home health, personal care, senior care, quality care, compassionate care',
 }
 
 export default function RootLayout({
@@ -20,23 +20,29 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <Head>
+      <head>
         {/* Google Tag Manager */}
-        <script dangerouslySetInnerHTML={{ __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        <Script id="google-tag-manager" strategy="beforeInteractive">
+          {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-TVCMQQHZ');` }} />
+})(window,document,'script','dataLayer','GTM-TVCMQQHZ');`}
+        </Script>
         {/* End Google Tag Manager */}
-        <title>CareLiving - Quality Home Health and Personal Care</title>
-        <meta name="description" content="CareLiving provides quality home health and personal care services, helping seniors with daily tasks to maintain their independence." />
-        <meta name="keywords" content="CareLiving, home health, personal care, senior care, quality care, compassionate care" />
-      </Head>
+      </head>
       <body className='min-h-screen flex flex-col'>
         {/* Google Tag Manager (noscript) */}
-        <noscript dangerouslySetInnerHTML={{ __html: `<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TVCMQQHZ"
-height="0" width="0" style="display:none;visibility:hidden"></iframe>` }} />
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-TVCMQQHZ"
+            height="0"
+            width="0"
+            style={{ display: 'none', visibility: 'hidden' }}
+          ></iframe>
+        </noscript>
         {/* End Google Tag Manager (noscript) */}
+        
         {/* Google Analytics */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-2TC7JJWEY7"
@@ -48,6 +54,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>` }} />
           gtag('js', new Date());
           gtag('config', 'G-2TC7JJWEY7');`}
         </Script>
+        
         {/* Google Ads */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=AW-16926500271"

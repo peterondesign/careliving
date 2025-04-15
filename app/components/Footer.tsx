@@ -42,6 +42,8 @@ const Footer = () => {
                         <Link href="https://careliving.clearcareonline.com/quick-apply/" target="_blank" className="text-text-secondary hover:text-primary transition-colors">CareLivers (Careers)</Link>
                         <Link href="/waitlist" className="text-text-secondary hover:text-primary transition-colors">Waitlist</Link>
                         <Link href="/contact" className="text-text-secondary hover:text-primary transition-colors">Contact Us</Link>
+                        <Link href="/privacy-policy" className="text-text-secondary hover:text-primary transition-colors">Privacy Policy</Link>
+                        <Link href="/terms" className="text-text-secondary hover:text-primary transition-colors">Terms of Service</Link>
                     </nav>
                 </div>
 

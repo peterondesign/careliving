@@ -29,7 +29,7 @@ const Hero = () => {
               href="/contact"
               className="inline-block bg-white hover:bg-white/90 text-teal-600 px-8 py-4 rounded-2xl transition-colors font-semibold"
             >
-              Contact Us
+              Request your free consultation
             </Link>
           </div>
         </div>
@@ -48,7 +48,7 @@ const Hero = () => {
             href="/contact"
             className="inline-block bg-primary hover:bg-primary-hover text-white px-8 py-4 rounded-2xl transition-colors"
           >
-            Contact Us
+             Request your free consultation
           </Link>
         </div>
       </div>

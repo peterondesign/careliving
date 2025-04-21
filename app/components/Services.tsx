@@ -36,6 +36,36 @@ const services = [
     image: "/housekeeping.jpg",
     href: "/services/housekeeping"
   },
+  {
+    title: "Meal Preparation",
+    description: "Nutritious meal planning and preparation tailored to dietary needs.",
+    image: "/meal-preparation.jpeg",
+    href: "/services/meal-preparation"
+  },
+  {
+    title: "Mobility Assistance & Transfers",
+    description: "Safe mobility support and transfer assistance at home.",
+    image: "/mobility.jpeg",
+    href: "/services/mobility-assistance"
+  },
+  {
+    title: "Transportation & Errands",
+    description: "Transportation and errand services for appointments and daily needs.",
+    image: "/transportation.webp",
+    href: "/services/transportation"
+  },
+  {
+    title: "Skilled Nursing",
+    description: "Wound care, medication management, post-surgical care by licensed nurses.",
+    image: "/nursing.jpg",
+    href: "/services/skilled-nursing"
+  },
+  {
+    title: "Therapy Services",
+    description: "Physical, occupational, and speech therapy services at home.",
+    image: "/therapy.jpeg",
+    href: "/services/therapy-services"
+  },
 ];
 const Services = () => {
   return (

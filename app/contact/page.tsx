@@ -6,6 +6,7 @@ import Head from 'next/head'
 import React, { useEffect } from "react";
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import { title } from 'process';
 
 declare global {
   interface Window {
@@ -16,6 +17,8 @@ declare global {
 export default function ContactPage() {
   return (
     <div> {/* Ensure a single parent element wraps all JSX */}
+      <Header />
+      {/* Google Tag Manager */}
       <Head>
         <title>Contact Us - CareLiving</title>
         <meta name="description" content="Get in touch with CareLiving for quality home health and personal care services. Contact us via email, phone, or visit our location." />

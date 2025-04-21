@@ -8,7 +8,7 @@ import Footer from '../components/Footer';
 import ContactCTA from '../components/ContactCTA';
 import Link from 'next/link';
 
-type ServiceName = 'personal-care' | 'companionship' | 'medication' | 'respite' | 'housekeeping';
+type ServiceName = 'personal-care' | 'companionship' | 'medication' | 'respite' | 'housekeeping' | 'meal-preparation' | 'mobility-assistance' | 'therapy-services' | 'transportation' | 'skilled-nursing' 
 
 interface ServiceProps {
     serviceSlug: ServiceName;
@@ -41,6 +41,31 @@ const Service: NextPage<ServiceProps> = ({ serviceSlug, serviceTitle }) => {
             shortDescription: "Light housekeeping and meal preparation services.",
             longDescription: "We handle light cleaning and meal prep, keeping homes safe, clean, and stress-free.",
             imageUrl: "/housekeeping.jpg?height=400&width=600"
+        },
+        "meal-preparation": {
+            shortDescription: "Nutritious meal planning and preparation tailored to dietary needs.",
+            longDescription: "Our caregivers prepare healthy, delicious meals based on your preferences and dietary requirements, ensuring proper nutrition and enjoyable dining experiences.",
+            imageUrl: "/meal-preparation.jpeg?height=400&width=600"
+        },
+        "mobility-assistance": {
+            shortDescription: "Safe mobility support and transfer assistance at home.",
+            longDescription: "We help clients move safely around their home, providing transfer assistance, fall prevention, and support with walking aids for greater independence.",
+            imageUrl: "/mobility.jpeg?height=400&width=600"
+        },
+        "transportation": {
+            shortDescription: "Transportation and errand services for appointments and daily needs.",
+            longDescription: "We provide reliable transportation to medical appointments, social outings, and errands, helping clients stay active and connected.",
+            imageUrl: "/transportation.jpg?height=400&width=600"
+        },
+        "skilled-nursing": {
+            shortDescription: "Professional nursing care: wound care, medication management, post-surgical care.",
+            longDescription: "Our skilled nurses deliver advanced care at home, including wound care, medication management, and post-surgical support, ensuring optimal recovery and health.",
+            imageUrl: "/nursing.jpg?height=400&width=600"
+        },
+        "therapy-services": {
+            shortDescription: "Physical, occupational, and speech therapy services at home.",
+            longDescription: "Licensed therapists provide physical, occupational, and speech therapy in the comfort of your home, supporting rehabilitation and improved quality of life.",
+            imageUrl: "/therapy.jpeg?height=400&width=600"
         },
     };
 
@@ -75,6 +100,30 @@ const Service: NextPage<ServiceProps> = ({ serviceSlug, serviceTitle }) => {
             imageUrl: "/housekeeping.jpg?height=400&width=600",
             href: "/services/housekeeping"
         },
+        {
+            title: "Meal Preparation",
+            shortDescription: "Healthy meal planning and cooking.",
+            imageUrl: "/meal-preparation.jpeg?height=400&width=600",
+            href: "/services/meal-preparation"
+        },
+        {
+            title: "Mobility Assistance & Transfers",
+            shortDescription: "Support with mobility and transfers.",
+            imageUrl: "/mobility.jpeg?height=400&width=600",
+            href: "/services/mobility-assistance"
+        },
+        {
+            title: "Transportation & Errands",
+            shortDescription: "Reliable transport for appointments and errands.",
+            imageUrl: "/transportation.webp?height=400&width=600",
+            href: "/services/transportation"
+        },
+        {
+            title: "Skilled Nursing",
+            shortDescription: "Wound care, medication management, post-surgical care.",
+            imageUrl: "/nursing.jpg?height=400&width=600",
+            href: "/services/skilled-nursing"
+        },
     ].filter(otherService => otherService.href !== `/services/${serviceSlug}`);
 
     return (
@@ -83,7 +132,7 @@ const Service: NextPage<ServiceProps> = ({ serviceSlug, serviceTitle }) => {
             <Header />
             <section className="bg-teal-600 text-white pt-16">
                 <div className="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between">
-                    <div className="w-3/5 py-12">
+                    <div className="w-3/5 my-24 md:py-12">
                         <h1 className="text-4xl md:text-5xl md:text-left text-center font-bold mb-6" style={{ lineHeight: 1.3 }}>
                             {serviceTitle} Service
                         </h1>

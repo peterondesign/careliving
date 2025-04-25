@@ -30,11 +30,11 @@ const Header = () => {
     <header className="w-full animate-fadeIn fixed z-50 bg-white shadow-md">
       <div className="bg-teal-800 w-full py-3 px-4 md:px-20">
         <div className="flex items-center justify-between text-white flex-wrap">
-          <a href="tel:571-599-7467" className="cursor-pointer flex items-center gap-1">
+          <a href="tel:571-550-9778" className="cursor-pointer flex items-center gap-1">
             <div className="flex items-center gap-1">
               <span className="hidden md:inline text-xl font-bold md:text-xl">We're here for you.</span>
               <Phone size={24} />
-              <span className="text-xl font-bold md:text-xl">Call us: 571-599-7467</span>
+              <span className="text-xl font-bold md:text-xl">Call us: 571-550-9778</span>
             </div>
           </a>
 

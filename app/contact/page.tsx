@@ -61,7 +61,7 @@ export default function ContactPage() {
                   </div>
                   <div className="flex justify-start md:justify-start items-center space-x-4 mb-2">
                     <Phone className="w-5 h-5" />
-                    <a href="tel:571-599-7467" className="hover:underline">Phone: 571-599-7467</a>
+                    <a href="tel:571-550-9778" className="hover:underline">Phone: 571-550-9778</a>
                   </div>
                   <div className="flex justify-start md:justify-start items-center space-x-4">
                     <MapPin className="w-5 h-5" />
@@ -93,4 +93,3 @@ export default function ContactPage() {
     </div>
   )
 }
-

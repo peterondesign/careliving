@@ -16,11 +16,11 @@ const Footer = () => {
                             info@carelivers.com
                         </p>
                     </a>
-                    <a href="tel:571-599-7467" target="_blank"
+                    <a href="tel:571-550-9778" target="_blank"
                         rel="noopener noreferrer" >
                         <p className="flex items-center text-text-secondary mt-2">
                             <Phone size={16} className="mr-2" />
-                            571-599-7467
+                            571-550-9778
                         </p>
                     </a>
                     <a href="https://www.google.com/maps?q=491B+Carlisle+Dr,+Herndon+VA+20170"  target="_blank"

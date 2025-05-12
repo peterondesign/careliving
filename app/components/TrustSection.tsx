@@ -18,7 +18,7 @@ const TrustSection = () => {
       icon: <Phone size={40} className="text-teal-600 mb-4" />,
       text: "Speak With a Care Coordinator",
       description: "Get personalized support and answers today.",
-      href: "tel:571-550-9778", // Added href for phone link
+      href: "tel:(571) 520 5039", // Added href for phone link
     },
   ];
 

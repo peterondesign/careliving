@@ -63,7 +63,7 @@ export function Footer() {
             </div>
             <div className="flex md:justify-center justify-start  items-center space-x-4">
               <Phone className="w-5 h-5" />
-              <a href="tel:571-550-9778" className="text-teal-900 hover:underline">571-550-9778</a>
+              <a href="tel:(571) 520 5039" className="text-teal-900 hover:underline">(571) 520 5039</a>
             </div>
             <div className="flex md:justify-center justify-start  items-center space-x-4">
               <MapPin className="w-5 h-5" />

@@ -32,20 +32,20 @@ const Header = () => {
         <div className="flex items-center justify-between text-white flex-wrap">
           <a href="tel:571-550-9778" className="cursor-pointer flex items-center gap-1">
             <div className="flex items-center gap-1">
-              <span className="hidden md:inline text-xl font-bold md:text-xl">We're here for you.</span>
+              {/* <span className="hidden md:inline text-xl font-bold md:text-xl">We're here for you.</span> */}
               <Phone size={24} />
               <span className="text-xl font-bold md:text-xl">Call us: 571-550-9778</span>
             </div>
           </a>
 
-          <Link
+          {/* <Link
             href="https://careliving.clearcareonline.com/quick-apply/"
             target="_blank"
             rel="noopener noreferrer"
             className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg font-bold"
           >
             Now Hiring
-          </Link>
+          </Link> */}
 
           <div className="hidden md:flex items-center gap-4">
             <Link

@@ -1,8 +1,3 @@
 {
-  "/services/therapy-services/page": "app/services/therapy-services/page.js",
-  "/services/mobility-assistance/page": "app/services/mobility-assistance/page.js",
-  "/services/page": "app/services/page.js",
-  "/contact/page": "app/contact/page.js",
-  "/services/skilled-nursing/page": "app/services/skilled-nursing/page.js",
-  "/services/respite/page": "app/services/respite/page.js"
+  "/page": "app/page.js"
 }

@@ -31,9 +31,9 @@ const Header = () => {
       <div className="bg-teal-800 w-full py-3 px-4 md:px-20">
         <div className="flex items-center justify-between text-white flex-wrap">
           <a href="tel:(571) 520 5039" className="cursor-pointer flex items-center gap-1">
-            <div className="flex items-center gap-8">
-              <span className="hidden md:inline text-xl font-bold md:text-xl">Speak with a Care Coordinator Today</span>
-              <div className="flex flex-row gap-2 items-center">
+            <div className="flex md:flex-row flex-col items-start md:gap-8 gap-2">
+              <span className="md:inline text-xl font-bold md:text-xl">Speak with a Care Coordinator Today</span>
+              <div className="flex flex-row gap-2 items-start">
                 <Phone size={24} />
                 <span className="text-xl font-bold md:text-xl">Call us: (571) 520 5039</span>
               </div>
